@@ -1,0 +1,43 @@
+/*
+
+RESET
+
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*
+
+GENERAL
+
+*/
+
+.container{
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container > ._cell{
+    width: 10%;
+    height: 100px;
+    outline: 5px solid black;
+    background-color: darkred;
+}
+
+#Start_button{
+    margin: 50px 1000px;
+}
+
+.container > ._cell.active{
+    background-color: rgb(127, 207, 207);
+}
