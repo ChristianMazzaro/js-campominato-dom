@@ -47,23 +47,39 @@ startButton.addEventListener('click', function() {
      }
      console.log(bombs)
 
-    
+     let j = 0
     for(let i = 1; i <= 100; i++){
 
         const cell = document.createElement('div')
         cell.classList.add('_cell')
         cell.append(i)
-        cell.addEventListener('click', function(){
+        
+        cell.addEventListener('click',function(){
+
+            j++
+            
             this.classList.toggle('active')
             console.log(i)
+            
             if(bombs.includes(i)){
                 this.setAttribute("class", "_cell bomb")
-                console.log('ci simao quasi')
+                alert("hai perso!  il tuo punteggio finale è:  " + j)
+                console.log('il tuo punteggio finale è:', j - 1)
+
+                location.reload()
+
             }
+
+            else{
+                console.log('punteggio:', j)  
+            }
+            
         })
         cellContainer.append(cell)
+        
+        
     }
-
+    
 //     const bombs = [];
     
 
