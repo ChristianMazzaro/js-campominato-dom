@@ -31,7 +31,7 @@ GENERAL
     width: 10%;
     height: 100px;
     outline: 5px solid black;
-    background-color: darkred;
+    background-color: green;
 }
 
 #Start_button{
@@ -40,4 +40,8 @@ GENERAL
 
 .container > ._cell.active{
     background-color: rgb(127, 207, 207);
+}
+
+.bomb{
+    background-color: darkred !important;
 }
