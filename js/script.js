@@ -44,10 +44,10 @@ startButton.addEventListener('click', function() {
              bombs.push(bombNumber)
          }
  
-     }
-     console.log(bombs)
+    }
+    console.log(bombs)
 
-     let j = 0
+    let j = 0
     for(let i = 1; i <= 100; i++){
 
         const cell = document.createElement('div')
@@ -56,19 +56,25 @@ startButton.addEventListener('click', function() {
         
         cell.addEventListener('click',function(){
 
-            j++
-            
-            this.classList.toggle('active')
-            console.log(i)
-            
-            if(bombs.includes(i)){
-                this.setAttribute("class", "_cell bomb")
-                alert("hai perso!  il tuo punteggio finale è:  " + j)
-                console.log('il tuo punteggio finale è:', j - 1)
+            const clickedBombs = document.querySelectorAll('.bomb')
 
-                location.reload()
-
+            if(clickedBombs.length == 0){
+                j++
+            
+                this.classList.toggle('active')
+                console.log(i)
+                
+                if(bombs.includes(parseInt(i))){
+                    this.setAttribute("class", "_cell bomb")
+                    alert("hai perso!  il tuo punteggio finale è:  " + j)
+                    console.log('il tuo punteggio finale è:', j - 1)
+    
+                    
+    
+                }
             }
+
+
 
             else{
                 console.log('punteggio:', j)  
